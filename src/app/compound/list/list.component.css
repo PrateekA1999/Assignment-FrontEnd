@@ -3,11 +3,17 @@
     left:calc(15%);
     top:20px;
   }
+
+  .grid{
+    margin-bottom: 40px;
+  }
   
   .example-card {
     min-width: 400px;
     margin-bottom: 8px;
     border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px darkgrey;
+    background-color: rgba(245, 245, 220,0.2);
   }
 
   .zero-row{
