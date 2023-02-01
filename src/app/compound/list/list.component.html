@@ -38,7 +38,7 @@
                                 <mat-card-title>
                                     <p class="title">{{data['CompoundName']}}</p>
                                 </mat-card-title>
-                                <img mat-card-sm-image [src]="data['strImageSource']" [alt]="data['CompoundName']" class="img" />
+                                <img mat-card-sm-image [matTooltip]="data['CompoundName']" [src]="data['strImageSource']" [alt]="data['CompoundName']" class="img" />
                             </mat-card-title-group>
                         </mat-card-header>
                         <mat-card-actions class="buttons">
