@@ -7,6 +7,10 @@
   .grid{
     margin-bottom: 40px;
   }
+
+.type-search{
+  width:300px;
+  }
   
   .example-card {
     min-width: 400px;
@@ -58,6 +62,11 @@
     margin-left:10px;
     width: 140px;
  }
+
+ .sort{
+    width: 180px;
+ }
+
 
  .ml2{
     margin-left:2px;
