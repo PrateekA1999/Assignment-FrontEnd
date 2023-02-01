@@ -1,0 +1,63 @@
+<div>
+    <div class="fl">
+        <div class="inp">
+            <mat-form-field appearance="outline">
+                <mat-label>Sort</mat-label>
+                <mat-select [(ngModel)]="selectedSort" (selectionChange)="changeSort($event)">
+                    <mat-option *ngFor="let i of sort" [value]="i.value">
+                        {{i.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="search">
+                <mat-label>Search Attribute</mat-label>
+                <mat-select [(ngModel)]="selectedAtr" (selectionChange)="changeAtr($event)">
+                    <mat-option *ngFor="let i of Atr" [value]="i.value">
+                        {{i.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="ml-2">
+                <input type="text" matInput [formControl]="emailFormControl" [placeholder]="placeHolder">
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-icon-button matTooltip="Upload CSV" class="icon-display"
+                color="primary" (click)="uploadCompoundCsv()"><mat-icon>note_add</mat-icon></button>
+            <button mat-icon-button matTooltip="Add new Compound" class="icon-display"
+                color="primary"(click)="createCompound()"><mat-icon>add_circle_outline</mat-icon></button>
+        </div>
+    </div>
+    <div class="grid" *ngIf="Records.length != 0">
+        <mat-grid-list cols="2" rowHeight="130px">
+            <div *ngFor="let data of Records">
+                <mat-grid-tile>
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                            <mat-card-title-group>
+                                <mat-card-title>
+                                    <p class="title">{{data['CompoundName']}}</p>
+                                </mat-card-title>
+                                <img mat-card-sm-image [src]="data['strImageSource']" [alt]="data['CompoundName']" class="img" />
+                            </mat-card-title-group>
+                        </mat-card-header>
+                        <mat-card-actions class="buttons">
+                            <button mat-icon-button matTooltip="Description of compound"
+                                color="primary" (click)="compoundDetails(data['id'])"><mat-icon>description</mat-icon></button>
+                            <button mat-icon-button matTooltip="Edit compound details"
+                                color="primary" (click)="updateCompound(data)"><mat-icon>edit</mat-icon></button>
+                            <button mat-icon-button matTooltip="Delete compound"
+                                color="primary" (click)="deleteCompound(data['id'])"><mat-icon>delete_outline</mat-icon></button>
+                        </mat-card-actions>
+                    </mat-card>
+                </mat-grid-tile>
+            </div>
+        </mat-grid-list>
+    </div>
+    <div class="zero-row" *ngIf="Records.length == 0">
+        No Records Found
+    </div>
+    <mat-paginator class="paginate" #paginator [length]="totalLength" (page)="pageClick($event)" [pageSize]="4" [pageSizeOptions]="[4,6,8]"
+        aria-label="Select page">
+    </mat-paginator>
+</div>

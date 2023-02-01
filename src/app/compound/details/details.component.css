@@ -1,0 +1,33 @@
+.img{
+    height:200px;
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3{
+    color: darkslateblue;
+}
+
+p{
+    color: darkgray;
+}
+
+.mt-10{
+    margin-top: -10px;
+}
+
+.mt-5{
+    margin-top: -5px;
+}
+
+.desc{
+    max-width: calc(70%);
+    margin-bottom: 30px;
+}

@@ -1,0 +1,62 @@
+  mat-grid-list{
+    width:calc(70%);
+    left:calc(15%);
+    top:20px;
+  }
+  
+  .example-card {
+    min-width: 400px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+  }
+
+  .zero-row{
+    text-align: center;
+    margin-top: 170px;
+    margin-bottom: 170px;
+  }
+  .buttons{
+    margin-top: -40px;
+  }
+
+  .img{
+    border-radius: 20px !important;
+  }
+
+  .inp{
+    display: flex;
+    margin-left:15px;
+    margin-top: 10px;
+  }
+
+  .fl{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(97%);
+  }
+
+  .title{
+    margin-top: 10px;
+    font-size: x-large;
+    font-weight: 500;
+  }
+
+  .icon-display {
+    transform: scale(1.2);
+ }
+ 
+ .search{
+    margin-left:10px;
+    width: 140px;
+ }
+
+ .ml2{
+    margin-left:2px;
+ }
+
+ .paginate{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  } 

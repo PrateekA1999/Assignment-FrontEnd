@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>{{headLine}}</h1>
+<div mat-dialog-content class="box">
+    <form class="mt10" [formGroup]="CompoundForm">
+        <mat-form-field class="mb10" [style.width.px]=327 appearance="outline">
+            <mat-label>Compound Name</mat-label>
+            <input formControlName="CompoundName" matInput placeholder="Compound Name">
+            <mat-error *ngIf="CompoundForm.controls['CompoundName'].hasError('required')">
+                <p class="ml-15">Compound Name is <strong>required</strong></p>
+              </mat-error>
+        </mat-form-field>
+        <mat-form-field class="mb10" [style.width.px]=327 appearance="outline">
+            <mat-label>Compound description</mat-label>
+            <textarea style="height: 150px;" formControlName="CompoundDescription" matInput placeholder="compound Description"></textarea>
+            <mat-error *ngIf="CompoundForm.controls['CompoundDescription'].hasError('required')">
+                <p class="ml-15">Compound Description is <strong>required</strong><p>
+              </mat-error>
+        </mat-form-field>
+        <mat-form-field class="mb10" [style.width.px]=327 appearance="outline">
+            <mat-label>Compound Image Link</mat-label>
+            <input formControlName="strImageSource" matInput placeholder="Compound Image Link">
+            <mat-error *ngIf="CompoundForm.controls['strImageSource'].hasError('required')">
+                <p class="ml-15">Compound Image Link is <strong>required</strong></p>
+              </mat-error>
+        </mat-form-field>
+        <mat-form-field [style.width.px]=327 appearance="outline">
+            <mat-label>Compound Image Attribution Link</mat-label>
+            <input formControlName="strImageAttribution" matInput placeholder="Compound Image Attribution Link">
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions class="buttons">
+  <button mat-raised-button mat-dialog-close>Close</button>
+  <button mat-raised-button color="primary"[disabled]="!CompoundForm.valid" (click)="compoundModify()">{{button}}</button>
+</div>

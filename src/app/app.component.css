@@ -1,0 +1,15 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.home-icon {
+    display: flex;
+    cursor: pointer;
+}
+
+.ml-5{
+    margin-left: -5px;
+}
+.mr20{
+    margin-right: 20px;
+}
