@@ -44,8 +44,10 @@
 
   .title{
     margin-top: 10px;
-    font-size: x-large;
+    font-size: larger;
     font-weight: 500;
+    color: firebrick;
+    font-family: cursive;
   }
 
   .icon-display {
